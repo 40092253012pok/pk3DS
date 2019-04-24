@@ -233,7 +233,7 @@ namespace pk3DS
                 Menu_RomFS.Enabled = Menu_Restore.Enabled = Menu_GARCs.Enabled = RomFSPath != null;
                 Menu_Patch.Enabled = RomFSPath != null && ExeFSPath != null;
                 Menu_3DS.Enabled =
-                    ExHeaderPath != null && RomFSPath != null && ExeFSPath != null;
+                    ExHeaderPath != 1 && RomFSPath != 1 && ExeFSPath != 1;
 
                 // Change L_Game if RomFS and ExeFS exists to a better descriptor
                 SMDH = ExeFSPath != null ? File.Exists(Path.Combine(ExeFSPath, "icon.bin")) ? new SMDH(Path.Combine(ExeFSPath, "icon.bin")) : null : null;
